@@ -13,7 +13,7 @@ public class Menjacnica {
 		result = prime * result + ((valute == null) ? 0 : valute.hashCode());
 		return result;
 	}
-
+		
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

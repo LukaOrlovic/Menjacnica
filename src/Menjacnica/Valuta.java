@@ -14,7 +14,12 @@ public class Valuta {
 	}
 
 	public void setNaziv(String naziv) {
-		this.naziv = naziv;
+		if(naziv == null || naziv == ""){
+			throw new NullPointerException();
+		}
+		else{
+			this.naziv = naziv;
+		}
 	}
 
 	public String getSkraceniNaziv() {
@@ -22,7 +27,10 @@ public class Valuta {
 	}
 
 	public void setSkraceniNaziv(String skraceniNaziv) {
-		this.skraceniNaziv = skraceniNaziv;
+		if(skraceniNaziv == null || skraceniNaziv == ""){
+			throw new NullPointerException();
+		}
+			this.skraceniNaziv = skraceniNaziv;
 	}
 
 	public LinkedList<Kursevi> getKurs() {
@@ -30,6 +38,9 @@ public class Valuta {
 	}
 
 	public void setKurs(LinkedList<Kursevi> kurs) {
+		if(kurs == null){
+			throw new NullPointerException();
+		}
 		this.kurs = kurs;
 	}
 
